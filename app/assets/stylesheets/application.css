@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+#error_explanation{
+    border: 1px solid red;
+}
+
+#error_explanation h2{
+    font-size: 14px;
+    color: #FFF;
+    background: red;
+    padding: 5px;
+/*    margin-top: -25px;*/
+    font-weight: bold;
+}
+
+#error_explanation li{
+    color: red;
+}
