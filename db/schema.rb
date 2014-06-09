@@ -11,15 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140609135132) do
+ActiveRecord::Schema.define(version: 20140609124122) do
 
-  create_table "contacts", force: true do |t|
-    t.string   "mobile"
-    t.string   "company_name"
-    t.string   "company_address"
+  create_table "additional_charges", force: true do |t|
+    t.string   "charge_name"
+    t.float    "surcharge"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+  end
+
+  create_table "special_days", force: true do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.float    "surcharge"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "time_based_timings", force: true do |t|
+    t.time     "fromtime"
+    t.time     "totime"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "time_baseds", force: true do |t|
+    t.string   "type"
+    t.float    "surcharge"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
@@ -41,7 +61,6 @@ ActiveRecord::Schema.define(version: 20140609135132) do
     t.string   "unconfirmed_email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "unicode"
     t.string   "username"
   end
 
