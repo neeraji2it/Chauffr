@@ -1,0 +1,49 @@
+<div class="panel-body">
+  <div class="text-center">
+    <div class="form-group">
+      <p style="font-size: 30px;">
+        <b>
+          Thanks <%= @name.titleize %>!!
+        </b>
+      </p>
+
+      <p style="font-size: 26px;">
+        Your clients can call or SMS with one touch from the mobile booking app, great isn't it!
+      </p>
+
+      <p style="font-size: 26px;">
+        What are your contact details for your clients to contact you?
+      </p>
+    </div>
+    
+    <%#*<div class="col-sm-6">%>
+      <%= form_for @contact, url: save_contact_homes_path, method: "POST" do |f|%>
+        <%= f.hidden_field :user_id%>
+      <div class="row">
+        <div class="form-group">
+          <%= f.text_field :mobile, :class=>"form-control", :placeholder => "Mobile *" %>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="form-group">
+          <%= f.text_field :company_name, :class=>"form-control", :placeholder => "Company Name *" %>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="form-group">
+          <%= f.text_field :company_address, :class=>"form-control", :placeholder => "Company Address *" %>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="form-group">
+          <%= f.submit "Done", :class=>"btn btn-lg btn-primary" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <%#*</div>%>
+  </div>
+</div>

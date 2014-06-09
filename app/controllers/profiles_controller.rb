@@ -1,11 +1,7 @@
 class ProfilesController < ApplicationController
-  before_action :authenticate_user!, :except => ['contact']
+  before_action :authenticate_user!
   
   def index
     @user = current_user
-  end
-  
-  def contact
-    
   end
 end

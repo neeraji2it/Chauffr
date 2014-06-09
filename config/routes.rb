@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :homes
-  resources :vehicles
-  resources :profiles do
+  resources :homes do
     collection do
       get :contact
+      post :save_contact
+      get :message
     end
   end
-    
+  resources :vehicles
+  resources :profiles 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
