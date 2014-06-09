@@ -1,0 +1,50 @@
+<div class="col-sm-6">
+
+  <%= form_for(@vehicle) do |f| %>
+    <% if @vehicle.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+        <ul>
+          <% @vehicle.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.select :vehicle_type, options_for_select([["Choose a vehicle type",""],["Holden Caprice or similar: Seats 4", "holden_caprice"],["Mercedes Viano or similar:Seats 7
+            ", "mercedes_viano"],["Crysler 300C or similar: Seats 4", "crysler"]]) %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.text_field :min_fare, :placeholder => "Enter minimum fare.",:class => "input-large",:class => "form-control" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.text_field :first_fare, :placeholder => "Enter fare per km for first 49kms." ,:class => "form-control" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.text_field :after_first_fare, :placeholder => "Enter fare per km after 50kms.",:class => "form-control"  %>
+      </div>
+    </div>
+
+    <div class="row">
+      <%= f.submit "Save", :class => "btn btn-success" %>
+    </div><br/>
+
+    <div class="row">
+      <%= link_to "Cancel", new_vehicle_path, :class => "btn btn-default" %>
+    </div>
+
+  <% end %>
+
+</div>
