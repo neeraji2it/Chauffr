@@ -1,0 +1,33 @@
+.navbar-fixed-top ul li a{ text-decoration:none;}
+.glyphicon{ font-size:20px; }
+body{ background-color:white;}
+.container-fluid {
+padding-right:0px !important;
+padding-left:0px !important;
+margin-right: auto !important;
+margin-left: auto !important;
+}
+.navbar {
+position: relative;
+min-height: 59px;
+margin-bottom: 20px;
+border: 1px solid transparent;
+width: 100%;
+}
+.container {
+padding-right:0px !important;
+padding-left: 0px !important;
+margin-right: auto !important;
+margin-left: auto !important;
+width:100%;
+}
+#toll-tip:before{
+    border: solid;
+    border-color:white transparent;
+    border-width: 40px 20px 0px 60px;
+    top:10px;
+    content: "";
+    left:-30px;
+    position: absolute;
+    z-index: 99;
+}

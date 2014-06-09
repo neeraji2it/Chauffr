@@ -1,5 +1,4 @@
-<div class="col-sm-6">
-
+<div class="col-sm-12">
   <%= form_for(@vehicle) do |f| %>
     <% if @vehicle.errors.any? %>
       <div id="error_explanation">
@@ -15,7 +14,7 @@
     <div class="row">
       <div class="form-group">
         <%= f.select :vehicle_type, options_for_select([["Choose a vehicle type",""],["Holden Caprice or similar: Seats 4", "holden_caprice"],["Mercedes Viano or similar:Seats 7
-            ", "mercedes_viano"],["Crysler 300C or similar: Seats 4", "crysler"]]) %>
+              ", "mercedes_viano"],["Crysler 300C or similar: Seats 4", "crysler"]]) %>
       </div>
     </div>
 
@@ -38,13 +37,13 @@
     </div>
 
     <div class="row">
-      <%= f.submit "Save", :class => "btn btn-success" %>
-    </div><br/>
-
-    <div class="row">
-      <%= link_to "Cancel", new_vehicle_path, :class => "btn btn-default" %>
+      <span style="margin-right: 30px;">
+        <%= f.submit "Save", :class => "btn btn-md btn-success" %>
+      </span>
+      
+      <span>
+        <%= link_to "Cancel", new_vehicle_path, :class => "btn btn-md btn-success" %>
+      </span>
     </div>
-
   <% end %>
-
 </div>

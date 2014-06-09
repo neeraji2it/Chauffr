@@ -26,20 +26,6 @@
           </div>
         <% end %>
 
-        <div class="form-inline pull-right">
-          <% if user_signed_in? %>
-            <span style="margin-right: 20px;" class="text-success">
-              Welcome <%= current_user.email %>
-            </span>
-
-            <span>
-              <%= link_to 'Logout', destroy_user_session_path, :method => :delete %>
-            </span>
-          <% else %>
-          
-          <% end %>
-        </div>
-
         <h1 class="text-warning" style="margin-bottom: 40px;">
           <b>
             <%= link_to "Chauffr", homes_path, :class => "text-warning" %>

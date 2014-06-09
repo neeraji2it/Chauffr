@@ -1,9 +1,22 @@
-<h2> Fare Calculation</h2>
-
-<div class="col-sm-9">
-  <%= link_to "Vehicle Based" , vehicles_path, :class => "btn btn-lg btn-info" %>
-  <%= link_to "Time Based","", :class => "btn btn-lg btn-info" %><br/>
-  <br/>
-  <%= link_to "Special Day Based",  new_special_day_path, :class => "btn btn-lg btn-info" %>
-  <%= link_to "Additional Charges", "", :class => "btn btn-lg btn-info" %>
+<div class="col-sm-12">
+  <h2> Fare Calculation</h2>
+  <div class="row" style="margin-bottom: 50px;">
+    <div class="col-sm-6">
+      <%= link_to "Vehicle Based" , vehicles_path, :class => "btn btn-lg btn-info" %>
+    </div>
+    
+     <div class="col-sm-6">
+      <%= link_to "Time Based","", :class => "btn btn-lg btn-info" %>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-6">
+       <%= link_to "Special Day Based",  new_special_day_path, :class => "btn btn-lg btn-info" %>
+    </div>
+    
+     <div class="col-sm-6">
+      <%= link_to "Additional Charges", "", :class => "btn btn-lg btn-info" %>
+    </div>
+  </div>
 </div>

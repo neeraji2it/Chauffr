@@ -1,4 +1,5 @@
 class VehiclesController < ApplicationController
+  layout "drivers"
   
   before_action :set_vehicle, only: ["edit","update", "destroy"]
   
