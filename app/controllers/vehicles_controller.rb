@@ -2,11 +2,15 @@ class VehiclesController < ApplicationController
   
   before_action :set_vehicle, only: ["edit","update", "destroy"]
   
+  add_breadcrumb "Home", :homes_path
+  add_breadcrumb "Vehicles", :vehicles_path
+  
   def index
     @vehicles = Vehicle.all
   end
   
   def new
+    add_breadcrumb "New", new_vehicle_path
     @vehicle = Vehicle.new
   end
   

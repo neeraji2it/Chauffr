@@ -38,3 +38,5 @@ gem 'thin'
 gem 'devise'
 
 gem 'rails_12factor', group: :production
+
+gem "breadcrumbs_on_rails"

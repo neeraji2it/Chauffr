@@ -1,0 +1,41 @@
+<div class="col-sm-6">
+<%= render_breadcrumbs %><br/>
+  
+  <%= form_for(@special_day) do |f| %>
+    <% if @special_day.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@special_day.errors.count, "error") %> prohibited this special_day from being saved:</h2>
+        <ul>
+          <% @special_day.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.text_field :start_date,:placeholder => "start date",:class => "input-large",:class => "form-control" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.text_field :end_date,:placeholder => "end date",:class => "form-control" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.text_field :surcharge,:placeholder => "surcharge",:class => "form-control"  %>
+      </div>
+    </div>
+
+    <div class="row">
+      <%= f.submit "Save", :class => "btn btn-success" %>
+    </div><br/>
+
+  <% end %>
+
+</div>
