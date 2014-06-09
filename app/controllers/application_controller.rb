@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_up_path_for(resource_or_scope)
-    root_path
+    contact_profiles_path
   end
 
 #  def is_login?
