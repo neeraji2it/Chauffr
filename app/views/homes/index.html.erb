@@ -1,15 +1,65 @@
 <div class="panel-body">
   <div class="text-center">
-    <p style="font-size: 30px;">
-      <b>
-        Chauffr helps chauffeurs receive and manage bookings on the go
-      </b>
-    </p>
-    
-    <p style="font-size: 26px;">
-      Clients can book a ride using mobile app or website. Chauffeurs receive and manage the booking on the go, collect payments and send invoices with one click
-    </p>
+    <div style="margin-bottom: 200px;">
+      <p style="font-size: 30px;">
+        <b>
+          Chauffr helps chauffeurs receive and manage bookings on the go
+        </b>
+      </p>
 
-    <%= link_to "GET STARTED", new_user_registration_path, :class => "btn btn-lg btn-primary" %>
+      <p style="font-size: 26px;">
+        Clients can book a ride using mobile app or website. Chauffeurs receive and manage the booking on the go, collect payments and send invoices with one click
+      </p>
+
+      <%= link_to "GET STARTED", new_user_registration_path, :class => "btn btn-lg btn-primary" %>
+    </div>
+
+    <div class="row" style="margin-bottom: 200px;">
+      <div class="col-sm-3">
+        <div class="img-responsive">
+          <div class="img-thumbnail">
+            <%= image_tag("avatar.png", :style=>"width:150px; height:150px;") %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-8">
+        <div>
+          <p style="font-size: 30px;">
+            <b>
+              Get your own mobile booking app
+            </b>
+          </p>
+          <p style="font-size: 26px;">
+            Make it easy for your clients to book a ride, give them a mobile app
+          </p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="row" style="margin-bottom: 200px;">
+      <div class="col-sm-3">
+        <div class="img-responsive">
+          <div class="img-thumbnail">
+            <%= image_tag("avatar.png", :style=>"width:150px; height:150px;") %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-8">
+        <div>
+          <p style="font-size: 30px;">
+            <b>
+              Get your own booking website
+            </b>
+          </p>
+          <p style="font-size: 26px;">
+            You clients ca get a quote, request a ride and make payments easily. The booking form takes care of peak time and night time surcharges and off peak time discounts. It even takes care of surchages for special days such as the Melbourne Cup Day
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
