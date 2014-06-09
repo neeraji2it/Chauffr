@@ -9,16 +9,39 @@
 
   <body>
     <div class="container">
-      <%#*<div class="panel-body">%>
-        <%#*<div class="row">%>
-          <%#= render 'layouts/user_widget' %>
-        <%#*</div>%>
-        <div class="row">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-        </div>
-      <%#*</div>%>
-      <%= yield %>
+<%#*<div class="panel-body">%>
+<%#*<div class="row">%>
+<%#= render 'layouts/user_widget' %>
+<%#*</div>%>
+
+<%#*</div>%>
+
+      <div class="panel-body">
+        <% if notice.present?%>
+          <div class="alert alert-block alert-info fade in">
+            <button data-dismiss="alert" class="close" type="button" data-original-title="">
+              x
+            </button>
+            <p class="notice"><%= notice %></p>
+          </div>
+        <% elsif alert.present? %> 
+          <div class="alert alert-block alert-info fade in">
+            <button data-dismiss="alert" class="close" type="button" data-original-title="">
+              x
+            </button>
+            <p class="alert"><%= alert %></p>
+          </div>
+        <% end %>
+
+        <h1 class="text-warning" style="margin-bottom: 40px;">
+          <b>
+            <%= link_to "Chauffr", homes_path, :class => "text-warning" %>
+          </b>  
+        </h1>
+
+        <%= yield %>
+      </div>
+
     </div>
   </body>
 </html>
