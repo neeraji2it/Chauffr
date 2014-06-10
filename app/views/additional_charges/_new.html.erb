@@ -1,0 +1,19 @@
+<div class="col-sm-6">
+  <%= form_for @additional, :remote => true do |f| %>
+    <div class="row">
+      <div class="form-group">
+        <%= f.text_field :charge_name, :class => "form-control", :placeholder => "Charge Name"%>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+        <%= f.text_field :surcharge, :class => "form-control", :placeholder => "Sur charge"%>
+      </div>
+    </div>
+
+    <div class="row">
+      <%= f.submit "Save", :class => "btn btn-md btn-success"%>
+    </div>
+  <% end %>
+</div>

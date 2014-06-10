@@ -1,0 +1,39 @@
+<table class="table table-bordered table-hover">
+  <tr>
+    <%= link_to "Add New", new_additional_charge_path, :remote => true %>
+  </tr>
+
+  <tr class="success">
+    <th>
+      Sn
+    </th>
+    <th>
+      Charge Name
+    </th>
+
+    <th>
+      Surcharge
+    </th>
+    
+    <th>
+      Status
+    </th>
+  </tr>
+
+  <% @additionals.each_with_index do |additional, i|%>
+    <tr>
+      <td>
+        <%= i+1%>
+      </td>
+      <td>
+        <%= additional.charge_name %>
+      </td>
+      <td>
+        <%= additional.surcharge %>
+      </td>
+      <td>
+        <%= link_to "delete", additional_charge_path(additional.id), data: {:confirm=>"Are you sure to delete?"}, :method => :delete, :remote => true%>
+      </td>
+    </tr>
+  <% end %>
+</table>

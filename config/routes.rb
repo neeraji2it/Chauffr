@@ -7,11 +7,13 @@ Rails.application.routes.draw do
       get :message
     end
   end
+  
   resources :vehicles
   resources :profiles 
     
   resources :fares
   resources :special_days
+  resources :additional_charges
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

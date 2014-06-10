@@ -2,7 +2,7 @@ class SpecialDaysController < ApplicationController
   add_breadcrumb "Home", :homes_path
   
   def new
-#    add_breadcrumb "New",new_special_day_path
+    add_breadcrumb "New",new_special_day_path
     @special_day = SpecialDay.new
   end
   
